@@ -5,6 +5,9 @@ app = Flask(__name__)
 @app.route("/")
 def Home():
     return "Hello Flask"
+@app.route("/math/<int:number>")
+def sqr(number):
+    return str(number*number)
 @app.route("/contact")
 def contact():
     return "contact us"
