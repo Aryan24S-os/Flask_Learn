@@ -8,6 +8,12 @@ def Home():
 @app.route("/contact")
 def contact():
     return "contact us"
+@app.route("/user/<name>")
+def user(name):
+    return f"hello {name}"
+@app.route("/student/<name>/<course>")
+def des(name , course):
+    return f"{name} is learning {course}"
 @app.route("/about")
 def about():
     return "welcome to about"
