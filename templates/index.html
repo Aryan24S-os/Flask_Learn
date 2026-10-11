@@ -1,0 +1,25 @@
+<html>
+<head><title>flaskuser</title></head>
+<body>
+    <p>{{"welcome " + name}}
+    <h1> learner : {{ name | upper}} </h1>
+    <h1> {{"new learning title" | title}} </h1>
+    <h1>{{"LOWER LETTERS" | lower}}</h1>
+    <h1>{{"capital letter" | capitalize}}</h1>
+    <h1> total courses : {{course | length}}</h1>
+<h1>my courses</h1>
+    <ul>
+    {%for c in course%}
+    <li>{{c}}</li>
+    {% endfor %}
+</ul>
+<br>
+living : {{city}}
+<br>
+<h1>{{36 / 6}}</h1>
+<p>first html in flask</p>
+<br>
+<h1>original price : {{price}}</h1>
+<h1>price after gst : {{price * 1.18}}</h1>
+</body>
+</html>
