@@ -1,0 +1,19 @@
+<html>
+    <body>
+        {%if is_logged_in%}
+        <h1> welcome here
+    </h1>
+    {%else%}
+    <h1> please! login </h1>
+    {% endif %}
+    {%if grade >= 90%}
+    <h1>Grade A</h1>
+    {%elif grade >=75%}
+    <h1>Grade B</h1>
+    {%elif grade >=50%}
+    <h1>Grade C</h1>
+    {%else%}
+    <h1>Fail</h1>
+    {%endif%}
+    </body>
+</html>
