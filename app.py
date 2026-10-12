@@ -3,20 +3,17 @@ from flask import Flask,render_template
 app = Flask(__name__)
 
 @app.route("/")
-def Home():
-    name = "aryan"
-    course = ["python" , "Flask" , "Django" , "Java"]
-    city = "Faridabad"
-    price = 5000
-    return render_template("index.html" , 
-                           name = name,
-                           course = course,
-                           city = city,
-                           price = price
-                           )
+def home():
+    return render_template("index.html")
 @app.route("/user/<passion>")
 def user(passion):
     return f"my passion is {passion}"
+@app.route("/about")
+def about():
+    return render_template("about.html")
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 
 @app.route("/teach")
 def teach():

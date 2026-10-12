@@ -1,8 +1,10 @@
-<html>
-    <body>
+{% extends "base.html" %}
+<div>
+{%block content%}
         {%if is_logged_in%}
         <h1> welcome here
     </h1>
+    <button onClick = "ShowMsg()" class = 'btn btn-danger'>click here</button>
     {%else%}
     <h1> please! login </h1>
     {% endif %}
@@ -14,6 +16,7 @@
     <h1>Grade C</h1>
     {%else%}
     <h1>Fail</h1>
+</div>
     {%endif%}
-    </body>
-</html>
+    {%endblock%}
+  
