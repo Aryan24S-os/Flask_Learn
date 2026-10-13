@@ -2,4 +2,15 @@
 {% block content %}
 <h1> Call on phone no. 9238479288 for help </h1>
 <hr>
+<form action='/contact' method='POST'>
+    <div>
+        <label> Name: </label>
+        <input type ='text' name = 'username' placeholder='enter your name'>
+    </div>
+    <div>
+        <label>Phone number: </label>
+        <input type='text' name ='phone' placeholder ='enter yout number'>
+    </div>
+    <button type='submit'>send</button>
+</form>
 {% endblock %}

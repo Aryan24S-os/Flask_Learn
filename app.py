@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,request
  
 app = Flask(__name__)
 
@@ -11,10 +11,17 @@ def user(passion):
 @app.route("/about")
 def about():
     return render_template("about.html")
-@app.route("/contact")
+@app.route("/contact" , methods = ["GET" ,"POST"])
 def contact():
+    if request.method == 'POST':
+        name = request.form.get("username")
+        number = request.form.get("phone")
+        return f"Hello {name} your number is {number}"
     return render_template("contact.html")
-
+@app.route("/search")
+def search():
+    query = request.args.get("query")
+    return f"you searched for {query}"
 @app.route("/teach")
 def teach():
     grade = 80

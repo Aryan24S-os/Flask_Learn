@@ -1,6 +1,15 @@
+
 {% extends "base.html" %}
+
 {% block content %}
-<img src="{{url_for('static' ,filename='images/logo.png')}}" alt ="logo">
-<h1> Since 2010 </h1>
-<hr>
+<div class="max-w-2xl mx-auto mt-10 p-6 bg-blue-100 rounded-xl shadow">
+    <h2 class="text-3xl font-bold text-blue-800">
+        About Us
+    </h2>
+    <button onClick="ShowMsg()"  class="mt-6 bg-blue-600 text-blue px-5 py-2 rounded-lg hover:bg-blue-700"> clickhere </button>
+
+    <p class="mt-4 text-gray-700">
+        I am learning Flask, Jinja2, and frontend development.
+    </p>
+</div>
 {% endblock %}
